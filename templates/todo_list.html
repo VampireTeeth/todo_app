@@ -1,0 +1,11 @@
+{% extends todo_base.html %}
+{% block content %}
+<div class="row marketing">
+  <div class="col-lg-6">
+    {%for todo in todos%}
+    <h4>{{escape(todo['task'])}}</h4>
+    <label>{{escape(todo['status'])}}</label>
+    {%end%}
+  </div>
+</div>
+{% end %}
